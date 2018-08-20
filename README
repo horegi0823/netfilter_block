@@ -1,0 +1,7 @@
+<iptables configuration>
+iptables -F
+iptables -A INPUT -p tcp --dport 80 -j NFQUEUE
+iptables -A OUTPUT -p tcp --dport 80 -j NFQUEUE
+
+<usage>
+./netfilter_test top-1m.csv
